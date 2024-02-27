@@ -1,4 +1,6 @@
 @import "variables";
+@import "mixins";
+@import "extends";
 body {
     margin: 0px;
     padding: 0px;
@@ -19,7 +21,7 @@ div#root {
 
 /*global header css*/
 .notifications svg {
-  color: #FFD600;
+  color: $light-yellow;
   font-size: 30px;
 }
 
@@ -61,7 +63,7 @@ div#root {
   
 }
 .navbar-outer {
-    padding:14px 10px;
+  @include section-padding(14px, 10px, 14px ,10px);
     background-color: $white;
     box-shadow: $box-shadow;
 }
@@ -73,10 +75,7 @@ div#root {
 }
 
 .nav-user-info {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-
+  @include flex-property(flex,space-between,center,20px);
     img {
         height: 22px;
         width: 100%;
@@ -93,18 +92,17 @@ div#root {
   @extend %max-width;
   }
   .footer-outer {
-    padding: 0px 10px;
-    background: #3C3A3A;
+    @include section-padding(0px ,10px,0px, 10px);
+    background: $dark-gary;
     position: fixed;
     width: 100%;
     bottom: 0;
     @extend %z-index-strong;
   }
   .footer-wrapper-flex {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-items: center;
+    @include grid-property(grid,repeat(3,1fr),center,0px,0px)
   }
+
   .footer-wrapper {
     button {
       @extend %custom-button;
@@ -115,7 +113,6 @@ div#root {
     filter: invert(1);
 }
   }
- 
 button.cart-menu-wrapper {
   background: $light-yellow;
   padding: 20px;
@@ -126,9 +123,7 @@ button.cart-menu-wrapper {
   margin-top: -34px;
 }
 .footer-menu-flex {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  @include flex-property(flex,center,center,0px,column);
     p {
       @extend %paragraph;
       color: #fff;
@@ -146,7 +141,7 @@ button.cart-menu-wrapper {
 /*home search box section */
  
 .search-outer {
-    @include section-padding();
+    @include section-padding(30px, 10px ,0px, 10px);
   }
   .top-title {
     margin: 0px;
@@ -166,11 +161,8 @@ button.cart-menu-wrapper {
 /*home new items section*/
 
 .new-items-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 16px;
-    row-gap: 16px;
-    @extend %section-top-margin;
+  @include grid-property(grid,repeat(3,1fr),center,16px,16px);
+  @extend %section-top-margin;
   }
   .new-items-inner {
     @extend %max-width;
@@ -180,10 +172,7 @@ button.cart-menu-wrapper {
     box-shadow: $box-shadow;
     padding: 20px;
     border-radius: 6px;
-    display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    align-items: center;
-    column-gap: 14px;
+    @include grid-property(grid, 20% 1fr 20%,center,14px,0px)
   }
   .items-card-image img {
     height: 70px;
@@ -208,7 +197,7 @@ button.cart-menu-wrapper {
    @extend %home-heading-h3;
   }
   .new-items-outer {
-    @include section-padding();
+    @include section-padding(30px, 10px, 0px, 10px);
   }
 
 
@@ -217,7 +206,7 @@ button.cart-menu-wrapper {
     @extend %max-width;
   }
   .crousal-outer {
-    @include section-padding();
+    @include section-padding(30px, 10px, 0px ,10px);
 }
 .pop-crousal-wrapper {
    @extend %section-top-margin;
@@ -327,14 +316,14 @@ img {
  @extend %max-width
 }
 .show-menu-outer {
-  @include section-padding();
+  @include section-padding(30px ,10px ,0px ,10px);
 }
 
 
 
 // notification section
 .notification-outer{
-  @include section-padding();
+  @include section-padding(30px ,10px ,0px ,10px);
 }
 .notification-inner{
   @extend %max-width;
@@ -344,7 +333,7 @@ img {
  
 // profile page css
 .profile-outer{
-  @include section-padding();
+  @include section-padding(30px ,10px ,0px ,10px);
 }
 .profile-inner{
   @extend %max-width;

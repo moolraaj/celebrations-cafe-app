@@ -1,49 +1,10 @@
-//global variables for whole components
-$dark-gary: #3C3A3A;
-$light-yellow: #FFD600;
-$white:#fff;
-$font: montserrat;
-$font-min:16px;
-$border-color:#3c3a3a3b;
-$border-radius:4px;
-$box-shadow:0px 15px 50px 1px rgba(0, 0, 0, 0.08);
-$white-transparent:#ffffffd9;
- 
- 
-
-
-//mixin for section all section
-@mixin section-padding(){
-    padding: 30px 10px 0px 10px;
-}
-
-
-
-// mixin for all fles property
-@mixin flex-property($flex,$flex-content,$flex-items,$flex-gap:row){
-    display: $flex;
-    justify-content: $flex-content;
-    align-items: $flex-items;
-    column-gap: $flex-gap;
-    flex-direction: $flex-column;
-}
-
-
-//mixin for all grid property
-@mixin grid-property($grid,$grid-columns,$grid-items,$grid-gap){
-    display: $grid;
-    grid-template-columns: $grid-columns;
-    align-items: $grid-items;
-    column-gap: $grid-gap;
-}
- 
-
-
 //extend for max-width
 %max-width{
     max-width: 1240px;
     margin: 0px auto;
 }
+
+
 //entend for all (<p>)
 %paragraph {
     font-size: $font-min;
@@ -52,8 +13,9 @@ $white-transparent:#ffffffd9;
     font-family: $font;
 }
 
-//extend for custom button
 
+
+//extend for custom button
 %custom-button{
     background-color: transparent;
     border: unset;
@@ -62,6 +24,7 @@ $white-transparent:#ffffffd9;
     text-transform: capitalize;
     font-weight: 500;
 }
+
 
 //extend for home (<h3>)
 %home-heading-h3{

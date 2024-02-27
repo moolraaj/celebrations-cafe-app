@@ -1,0 +1,28 @@
+{
+     "notifications":[
+        {
+            "id":1,
+            "text":"Your order has been taken by the driver",
+            "time":"12:45"
+        },
+        {
+            "id":2,
+            "text":"Your order has been taken by the driver",
+            "time":"12:45"
+        },
+        {
+            "id":3,
+            "text":"Your order has been taken by the driver",
+            "time":"12:45"
+        },
+        {
+            "id":4,
+            "text":"Your order has been taken by the driver",
+            "time":"12:45"
+        }, {
+            "id":5,
+            "text":"Your order has been taken by the driver",
+            "time":"12:45"
+        }
+     ]
+}
